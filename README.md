@@ -5,12 +5,12 @@ Steps to run the app
 
 `npm start`
 
-Navigate to `http://localhost:3000/`
+You will get the output in your terminal something like this
+
+{"url":"http://google.com","priority":4}
 
 for unit testing
 `npm test`
 
 
-You will get the output in your terminal something like this
 
-{"url":"http://google.com","priority":4}
