@@ -2,7 +2,7 @@ const http = require('http');
 const constants = require('./constants/');
 const axios = require('axios');
 
-const hostname = '127.0.0.1';
+const hostname = 'localhost';
 const port = 3000;
 
 const server = http.createServer();
@@ -22,7 +22,7 @@ const findServer = () => {
     var serverURLs = serverDetails.map(serverDetail => serverDetail.url ? axios.get(serverDetail.url).catch(handleFailedReq) : null);
 
     //Simultaneously Sending All Get Requests
-    await axios.all(serverURLs, { timeout: 1000 * 25 }).then(axios.spread(async (...responses) => {
+    await axios.all(serverURLs, { timeout: 1000 * 5 }).then(axios.spread(async (...responses) => {
       //Getting list of active servers between status code 200 and 299
       activeServers = await serverDetails.filter((res, index) => {
         if (responses[index] && (responses[index].status >= 200 && responses[index].status <= 299)) {
