@@ -12,6 +12,5 @@ for unit testing
 
 
 You will get the output in your terminal something like this
-> node index.js
 
 {"url":"http://google.com","priority":4}
