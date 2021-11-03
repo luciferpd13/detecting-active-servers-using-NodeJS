@@ -1,0 +1,17 @@
+{
+  "name": "assignment",
+  "version": "1.0.0",
+  "description": "Assignment made by Prasanna Dubey",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --silent",
+    "start": "node index.js"
+  },
+  "author": "Prasanna Dubey",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "jest": "^27.3.1",
+    "save-dev": "0.0.1-security"
+  }
+}
